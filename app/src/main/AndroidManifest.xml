@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeatherStation_java">
-        <activity android:name=".livingroom"></activity>
+        <activity android:name=".bathroom"></activity>
+        <activity android:name=".bedroom1" />
+        <activity android:name=".outside" />
+        <activity android:name=".livingroom" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
