@@ -4,10 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bathroom">
+    tools:context=".bathroom"
+     >
+
 
     <TextView
-        android:id="@+id/outTextView2"
+        android:id="@+id/outTextViewBath"
         android:layout_width="247dp"
         android:layout_height="47dp"
         android:layout_marginTop="24dp"
@@ -17,10 +19,33 @@
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+         />
 
 
+    <TextView
+        android:id="@+id/outTextViewBathJson"
+        android:layout_width="385dp"
+        android:layout_height="412dp"
+        android:text="czeka"
+        android:textAlignment="center"
+        android:textColor="#A11106"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="10dp" />
 
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get JSON"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909"
+        tools:layout_editor_absoluteX="151dp" />
 
 
     <!-- this is our listview where we will display the fetched data -->

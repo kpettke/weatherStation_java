@@ -66,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void  openbathroom(){
-        Intent intent = new Intent(this, bedroom1.class);
+        Intent intent = new Intent(this, bathroom.class);
         startActivity(intent);
     }
 }
