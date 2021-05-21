@@ -19,4 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
+
+
+    <!-- this is our listview where we will display the fetched data -->
+
 </androidx.constraintlayout.widget.ConstraintLayout>

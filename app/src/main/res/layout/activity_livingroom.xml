@@ -40,37 +40,37 @@
                 android:text="ID"
                 android:textAlignment="center"
 
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/outTextView2"
-                android:layout_width="157dp"
+                android:layout_width="119dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="24dp"
                 android:text="Temperatura"
                 android:textAlignment="center"
 
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/outTextView2"
-                android:layout_width="131dp"
+                android:layout_width="104dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="24dp"
                 android:text="Wilgotność"
                 android:textAlignment="center"
 
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/outTextView2"
-                android:layout_width="65dp"
+                android:layout_width="125dp"
                 android:layout_height="47dp"
                 android:layout_marginTop="24dp"
                 android:text="Data"
                 android:textAlignment="center"
 
-                android:textSize="24sp" />
+                android:textSize="18sp" />
 
 
         </TableRow>
@@ -91,5 +91,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </TableLayout>
+
+    <ListView
+        android:layout_width="409dp"
+        android:layout_height="122dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="480dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
