@@ -7,10 +7,10 @@
     tools:context=".outside">
 
     <TextView
-        android:id="@+id/outTextView2"
+        android:id="@+id/outTextViewOut"
         android:layout_width="247dp"
         android:layout_height="47dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="4dp"
         android:text="Na zewnątrz"
         android:textAlignment="center"
         android:textColor="#A11106"
@@ -18,4 +18,120 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="399dp"
+        android:layout_height="499dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outTextViewOut"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/outTextView2"
+                android:layout_width="32dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:text="ID"
+                android:textAlignment="center"
+
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/outTextView2"
+                android:layout_width="112dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:text="Temperatura"
+                android:textAlignment="center"
+
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/outTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:text="Wilgotność"
+                android:textAlignment="center"
+
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/outTextView2"
+                android:layout_width="160dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="2dp"
+                android:text="Data"
+                android:textAlignment="center"
+
+                android:textSize="18sp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" />
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/outTextViewOutJson"
+        android:layout_width="385dp"
+        android:layout_height="421dp"
+
+        android:layout_marginTop="14dp"
+        android:padding="1dp"
+        android:text=""
+
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+    <Button
+        android:id="@+id/btn_get"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pobierz dane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.108"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintVertical_bias="0.99" />
+
+    <Button
+        android:id="@+id/btn_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Pokaż wykres"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintStart_toStartOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

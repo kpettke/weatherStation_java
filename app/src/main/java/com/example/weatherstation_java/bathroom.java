@@ -43,13 +43,13 @@ public class bathroom extends AppCompatActivity {
     }
 
     private void jsonParse(){
-        String url="http://192.168.1.219/pogodynka/con_db.php";
+        String url="http://192.168.1.219/pogodynka/json_wc.php";
         //String url="http://www.json-generator.com/api/json/get/ceDeuFXsia?indent=2";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                   JSONArray jsonArray = response.getJSONArray("salon");
+                   JSONArray jsonArray = response.getJSONArray("wc");
 
                   //  JSONArray jsonArray = new JSONArray();
 
@@ -64,7 +64,7 @@ public class bathroom extends AppCompatActivity {
                         String hum = salon.getString("hum");
                         String data = salon.getString("data");
 
-                        mTextViewResult.append( id + " " + temp + " " + hum + " " + data +"\n\n");
+                        mTextViewResult.append( id + "           " + temp +" C"+ "                    " + hum + "%" +"                " + data +"\n\n");
 
                     }
                 } catch (JSONException e) {
