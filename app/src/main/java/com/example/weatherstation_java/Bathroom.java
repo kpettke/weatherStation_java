@@ -2,6 +2,7 @@ package com.example.weatherstation_java;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -18,16 +19,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class bedroom1 extends AppCompatActivity {
-
+public class Bathroom extends AppCompatActivity {
     private TextView mTextViewResult;
     private RequestQueue mQueue;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bedroom1);
-        mTextViewResult = findViewById(R.id.outTextViewBedJson);
+        setContentView(R.layout.activity_bathroom);
+
+        mTextViewResult = findViewById(R.id.outTextViewBathJson);
         Button buttonJson = findViewById(R.id.btn_get);
 
         mQueue = Volley.newRequestQueue(this);
@@ -41,19 +43,19 @@ public class bedroom1 extends AppCompatActivity {
     }
 
     private void jsonParse(){
-        String url="http://192.168.1.219/pogodynka/json_bed.php";
+        String url="http://192.168.1.219/pogodynka/json_wc.php";
         //String url="http://www.json-generator.com/api/json/get/ceDeuFXsia?indent=2";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("sypialnia");
+                   JSONArray jsonArray = response.getJSONArray("wc");
 
-                    //  JSONArray jsonArray = new JSONArray();
+                  //  JSONArray jsonArray = new JSONArray();
 
-                    for (int i =0; i< jsonArray.length(); i++ )
+                      for (int i =0; i< jsonArray.length(); i++ )
 
-                    // for (int i =0; i<response.length(); i++ )
+                   // for (int i =0; i<response.length(); i++ )
                     {
                         JSONObject salon = jsonArray.getJSONObject(i);
 
@@ -79,5 +81,4 @@ public class bedroom1 extends AppCompatActivity {
 
         mQueue.add(request);
     }
-
 }

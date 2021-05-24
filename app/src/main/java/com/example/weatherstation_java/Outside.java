@@ -18,7 +18,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class outside extends AppCompatActivity {
+public class Outside extends AppCompatActivity {
 
     private TextView mTextViewResult;
     private RequestQueue mQueue;

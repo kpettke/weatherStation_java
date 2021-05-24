@@ -3,6 +3,7 @@ package com.example.weatherstation_java;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -18,37 +19,44 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class livingroom extends AppCompatActivity {
+public class Bedroom extends AppCompatActivity {
 
     private TextView mTextViewResult;
     private RequestQueue mQueue;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_livingroom);
-
-        mTextViewResult = findViewById(R.id.outTextViewLivingJson);
+        setContentView(R.layout.activity_bedroom1);
+        mTextViewResult = findViewById(R.id.outTextViewBedJson);
         Button buttonJson = findViewById(R.id.btn_get);
 
         mQueue = Volley.newRequestQueue(this);
+
+
 
         buttonJson.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 jsonParse();
             }
+        //    outTextViewBedJson.setMovementMethod(new ScrollingMovementMethod());
+
+
+
         });
     }
 
     private void jsonParse(){
-        String url="http://192.168.1.219/pogodynka/json_living.php";
+        String url="http://192.168.1.219/pogodynka/json_bed.php";
         //String url="http://www.json-generator.com/api/json/get/ceDeuFXsia?indent=2";
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
                 try {
-                    JSONArray jsonArray = response.getJSONArray("salon");
+                    JSONArray jsonArray = response.getJSONArray("sypialnia");
 
                     //  JSONArray jsonArray = new JSONArray();
 
@@ -79,10 +87,10 @@ public class livingroom extends AppCompatActivity {
         });
 
         mQueue.add(request);
+
+        TextView textView;
+        textView = (TextView) findViewById(R.id.outTextViewBedJson);
+        textView.setMovementMethod(new ScrollingMovementMethod());
     }
-
-
-
-
 
 }

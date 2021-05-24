@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".bedroom1">
+    tools:context=".Bedroom">
 
     <TextView
         android:id="@+id/outTextViewBed"
@@ -97,11 +97,12 @@
 
     <TextView
         android:id="@+id/outTextViewBedJson"
-        android:layout_width="385dp"
-        android:layout_height="421dp"
+        android:layout_width="378dp"
+        android:layout_height="401dp"
 
         android:layout_marginTop="14dp"
         android:padding="1dp"
+        android:scrollbars="vertical"
         android:text=""
 
         android:textColor="@color/black"

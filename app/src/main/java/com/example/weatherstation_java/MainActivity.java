@@ -53,20 +53,35 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void  openLivingroom(){
-        Intent intent = new Intent(this, livingroom.class);
+        Intent intent = new Intent(this, Livingroom.class);
         startActivity(intent);
     }
     public void  openOutside(){
-        Intent intent = new Intent(this, outside.class);
+        Intent intent = new Intent(this, Outside.class);
         startActivity(intent);
     }
     public void  openbedroom(){
-        Intent intent = new Intent(this, bedroom1.class);
+        Intent intent = new Intent(this, Bedroom.class);
         startActivity(intent);
     }
 
     public void  openbathroom(){
-        Intent intent = new Intent(this, bathroom.class);
+        Intent intent = new Intent(this, Bathroom.class);
         startActivity(intent);
+    }
+
+    public void openBarChart(View view) {
+        Intent intent = new Intent(this, BedroomChart.class);
+        intent.putExtra("method", "bars" );
+        startActivity(intent);
+
+    }
+
+    public void openPieChart(View view) {
+        Intent intent = new Intent(this, BedroomChart.class);
+        intent.putExtra("method", "pie" );
+        startActivity(intent);
+
+
     }
 }
