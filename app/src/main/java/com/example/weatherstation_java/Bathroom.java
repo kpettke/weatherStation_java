@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -64,7 +65,7 @@ public class Bathroom extends AppCompatActivity {
                         String hum = salon.getString("hum");
                         String data = salon.getString("data");
 
-                        mTextViewResult.append( id + "           " + temp +" C"+ "                    " + hum + "%" +"                " + data +"\n\n");
+                        mTextViewResult.append( id + "           " + temp +" C"+ "                   " + hum + "%" +"                " + data +"\n\n");
 
                     }
                 } catch (JSONException e) {
@@ -80,5 +81,8 @@ public class Bathroom extends AppCompatActivity {
         });
 
         mQueue.add(request);
+        TextView textView;
+        textView = (TextView) findViewById(R.id.outTextViewBathJson);
+        textView.setMovementMethod(new ScrollingMovementMethod());
     }
 }

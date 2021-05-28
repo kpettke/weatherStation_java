@@ -71,7 +71,7 @@ public class Bedroom extends AppCompatActivity {
                         String hum = salon.getString("hum");
                         String data = salon.getString("data");
 
-                        mTextViewResult.append( id + "           " + temp +" C"+ "                    " + hum + "%" +"                " + data +"\n\n");
+                        mTextViewResult.append( id + "           " + temp +" C"+ "                   " + hum + "%" +"                " + data +"\n\n");
 
                     }
                 } catch (JSONException e) {

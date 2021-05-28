@@ -3,6 +3,7 @@ package com.example.weatherstation_java;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -63,9 +64,26 @@ public class Outside extends AppCompatActivity {
                         String hum = salon.getString("hum");
                         String data = salon.getString("data");
 
-                        mTextViewResult.append( id + "           " + temp +" C"+ "                    " + hum + "%" +"                " + data +"\n\n");
+                        mTextViewResult.append( id + "           " + temp +" C"+ "                   " + hum + "%" +"                " + data +"\n\n");
 
                     }
+
+                    for (int i =0; i< jsonArray.length(); i++ )
+
+                    // for (int i =0; i<response.length(); i++ )
+                    {
+                        JSONObject salon = jsonArray.getJSONObject(i);
+
+                        double temp = salon.getDouble("temp");
+                        double temp1 = 1 + salon.getDouble("temp");
+
+                        if (temp1 > temp) {
+                            temp = temp1;
+                    }
+
+                        System.out.println(temp);
+                    }
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
@@ -79,6 +97,9 @@ public class Outside extends AppCompatActivity {
         });
 
         mQueue.add(request);
+        TextView textView;
+        textView = (TextView) findViewById(R.id.outTextViewOutJson);
+        textView.setMovementMethod(new ScrollingMovementMethod());
     }
 
 }

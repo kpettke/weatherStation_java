@@ -97,13 +97,13 @@
 
     <TextView
         android:id="@+id/outTextViewOutJson"
-        android:layout_width="385dp"
-        android:layout_height="421dp"
+        android:layout_width="381dp"
+        android:layout_height="406dp"
 
         android:layout_marginTop="14dp"
         android:padding="1dp"
         android:text=""
-
+        android:scrollbars="vertical"
         android:textColor="@color/black"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
